@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&family=Bebas+Neue&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:           #F2FAFA;
+  --ink:          #002B22;
+  --teal:         #00BFA5;
+  --teal-dark:    #003D36;
+  --teal-mid:     #00897B;
+  --orange:       #FF6B35;
+  --orange-light: #FF8C5A;
+  --muted:        #4A706A;
+  --border:       #A8D8D0;
+  --light:        #E0F5F1;
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--teal-dark); }
+::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 2px; }
+
+/* ── CURSOR ── */
+/* No mix-blend-mode — invisible on dark sections */
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+.cursor-dot {
+  width: 10px; height: 10px;
+  background: var(--orange);
+  border-radius: 50%;
+  transition: width .18s var(--ease-out),
+              height .18s var(--ease-out),
+              background .18s ease,
+              opacity .18s ease;
+}
+.cursor.hov .cursor-dot {
+  width: 52px; height: 52px;
+  background: var(--teal);
+  opacity: 0.42;
+}
+
+/* ── FOCUS ── */
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── GRAIN ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 998;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── THREE.JS ── */
+canvas { display: block; }
+
+/* ── TICKER ── */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.ticker-animate { animation: ticker 28s linear infinite; }
+.ticker-animate:hover { animation-play-state: paused; }
+
+/* ── FADE UP — staggered ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s var(--ease-out),
+              transform 0.65s var(--ease-out);
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* Stagger delays for siblings */
+.fade-up:nth-child(1) { transition-delay: 0ms; }
+.fade-up:nth-child(2) { transition-delay: 80ms; }
+.fade-up:nth-child(3) { transition-delay: 160ms; }
+.fade-up:nth-child(4) { transition-delay: 240ms; }
+.fade-up:nth-child(5) { transition-delay: 320ms; }
+.fade-up:nth-child(6) { transition-delay: 400ms; }
+.fade-up:nth-child(7) { transition-delay: 480ms; }
+.fade-up:nth-child(8) { transition-delay: 560ms; }
+
+/* ── LIVE DOT ── */
+@keyframes liveDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.8); }
+}
+.live-dot { animation: liveDot 2s ease-in-out infinite; }
+
+/* ── VINYL ── */
+@keyframes vinylSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.vinyl-spin { animation: vinylSpin 5s linear infinite; }
+
+/* ── SOUND BARS ── */
+@keyframes soundBar {
+  from { height: 4px; }
+  to   { height: 24px; }
+}
+.bar-1 { animation: soundBar 1s ease-in-out infinite alternate; }
+.bar-2 { animation: soundBar 1s ease-in-out 0.10s infinite alternate; }
+.bar-3 { animation: soundBar 1s ease-in-out 0.20s infinite alternate; }
+.bar-4 { animation: soundBar 1s ease-in-out 0.15s infinite alternate; }
+.bar-5 { animation: soundBar 1s ease-in-out 0.05s infinite alternate; }
+
+/* ── PHOTO RING ── */
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.ring-rotate { animation: ringRotate 16s linear infinite; }
+
+/* ── PROGRESS BAR ── */
+/* Triggered by JS adding .animate class when scrolled into view */
+.grow-bar {
+  width: 0 !important;
+  transition: width 1.4s var(--ease-out);
+}
+.grow-bar.animate { width: var(--bar-width) !important; }
+
+/* ── EGG REVEAL ── */
+@keyframes eggIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.egg-reveal { animation: eggIn 0.4s var(--ease-out) forwards; }
+
+/* ── NAV DRAWER ── */
+@keyframes drawerIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.drawer-in { animation: drawerIn 0.25s var(--ease-out) forwards; }
+
+/* ── SECTION NUMBER ── */
+.sec-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--border);
+  float: right;
+  margin-top: 2px;
+}
+
+/* ── METRIC HOVER ── */
+.metric-num {
+  display: inline-block;
+  transition: transform 0.2s var(--ease-out), color 0.2s ease;
+}
+.pitem:hover .metric-num { transform: scale(1.04); }
+
+/* ── GITHUB LINK ARROW ── */
+.gh-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+  text-decoration: none;
+  font-weight: 600;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+.gh-link::after { content: '→'; transition: transform 0.2s ease; }
+.gh-link:hover { color: var(--teal-dark); gap: 10px; }
+.gh-link:hover::after { transform: translateX(2px); }
+
+/* ── FACT LINK HOVER ── */
+.fact-link {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  padding-bottom: 1px;
+}
+.fact-link:hover { border-bottom-color: currentColor; }
+
+/* ── HOBBY CHIP ── */
+.hobby-chip {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border: 1.5px solid var(--teal-mid);
+  border-radius: 2px;
+  color: var(--teal-mid);
+  transition: background 0.18s ease, color 0.18s ease;
+  cursor: none;
+}
+.hobby-chip:hover { background: var(--teal-mid); color: #fff; }
+
+/* ── SONG CARD ── */
+.song-card {
+  background: rgba(0,0,0,.2);
+  border: 1px solid #1a5a50;
+  border-radius: 3px;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s var(--ease-out);
+  cursor: none;
+}
+.song-card:hover {
+  border-color: var(--teal);
+  background: rgba(0,191,165,0.07);
+  transform: translateY(-2px);
+}
+
+/* ── BUILDING CARD ── */
+.build-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  padding: 20px 22px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.build-card:hover {
+  border-color: var(--teal-mid);
+  box-shadow: 0 4px 20px rgba(0,137,123,0.1);
+}
+
+/* ── SCROLL PROGRESS BAR ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--teal), var(--orange));
+  z-index: 9998;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.1s linear;
+}
+
+/* ── GSAP placeholder ── */
+.gsap-fade { opacity: 0; }
