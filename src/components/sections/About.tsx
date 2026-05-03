@@ -12,7 +12,7 @@ const facts = [
   { label: 'Publication',value: 'ICCET 2026 ↗',        color: 'var(--teal-mid)', href: 'https://drive.google.com/file/d/13DOjauPinLhMkZyL5ACZXexEDvVOXVWE/view?usp=sharing' },
   { label: 'Experience', value: 'WOLFx · Cert ↗',      color: '', href: 'https://drive.google.com/file/d/1PFmdKGRp1GaHa-cI4ItGWv-dvhBolYI7/view?usp=sharing' },
   { label: 'IIT Cert',   value: 'Foundation DS ↗',     color: '', href: 'https://drive.google.com/file/d/1Ny9y4ChDDEAulTF4YXvXGWswUJm64CIj/view?usp=sharing' },
-  { label: 'Resume',     value: 'Download PDF ↓',      color: 'var(--orange)', href: 'https://drive.google.com/uc?export=download&id=16BnuTOFC_KrAzLGv8FDkW3JtPi_pFnUl' },
+  { label: 'Resume',     value: 'Download PDF ↓',      color: 'var(--orange)', href: 'https://drive.google.com/file/d/1PF50MwoH8csexG9UdkC_4EP8g-QH73HO/view' },
   { label: 'Status',     value: 'Open to intern 🔥',   color: 'var(--orange)' },
 ]
 
@@ -71,7 +71,7 @@ export default function About() {
             <strong style={{ color: 'var(--ink)' }}>I don't believe in doing one thing.</strong>
           </p>
           <div className="fade-up" style={{ padding: '16px 20px', borderLeft: '3px solid var(--orange)', background: 'var(--light)', fontSize: '13px', lineHeight: 1.7, color: 'var(--ink)', fontStyle: 'italic', marginBottom: '24px' }}>
-            "I've been on stage since I was 11. Judges, audiences, pressure. The same way I approach a dance — I don't ship until it's ready to perform."<br /><br />
+            "I've been on stage since I was 3. Judges, audiences, pressure. The same way I approach a dance — I don't ship until it's ready to perform."<br /><br />
             "Being a sportsperson taught me spirit. You don't always win, but you always play full out."<br /><br />
             Quote I live by: "Just keep going hahaha hehehe everything will be sorted."
           </div>
@@ -115,7 +115,7 @@ export default function About() {
                 <strong style={{ color: 'var(--ink)' }}>I don't believe in doing one thing.</strong>
               </p>
               <div className="fade-up" style={{ marginTop: '20px', padding: '16px 20px', borderLeft: '3px solid var(--orange)', background: 'var(--light)', fontSize: '13px', lineHeight: 1.7, color: 'var(--ink)', fontStyle: 'italic' }}>
-                "I've been on stage since I was 11. Judges, audiences, pressure. The same way I approach a dance — I don't ship until it's ready to perform."<br /><br />
+                "I've been on stage since I was 3. Judges, audiences, pressure. The same way I approach a dance — I don't ship until it's ready to perform."<br /><br />
                 "Being a sportsperson taught me spirit. You don't always win, but you always play full out."<br /><br />
                 Quote I live by: "Just keep going hahaha hehehe everything will be sorted."
               </div>

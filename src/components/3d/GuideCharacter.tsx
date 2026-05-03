@@ -12,7 +12,7 @@ const SECTIONS = [
   { id: 'building',   msg: 'Currently levelling up 📈',   sub: 'Two things cooking right now.' },
   { id: 'projects',   msg: 'These ship in production 🚀', sub: 'Not notebooks. Real products.' },
   { id: 'leadership', msg: 'I run marketing too 🎯',      sub: 'Every big KJSSE event — me.' },
-  { id: 'about',      msg: "On stage since I was 11 💃",  sub: 'Dance + code = my whole thing.' },
+  { id: 'about',      msg: "On stage since I was 3 💃",  sub: 'Dance + code = my whole thing.' },
   { id: 'music',      msg: 'Current playlist 🎵',         sub: 'Real songs, no curation.' },
 ]
 
