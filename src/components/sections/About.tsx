@@ -66,7 +66,7 @@ export default function About() {
             <span className="sec-num">05</span>
           </h2>
           <p className="fade-up" style={{ fontSize: '13.5px', lineHeight: 1.82, color: 'var(--muted)', marginBottom: '20px' }}>
-            Not just an ML engineer. Someone who questions what everyone else accepts, ships things that actually work, and has been performing under pressure since age 11.<br /><br />
+            Not just an ML engineer. Someone who questions what everyone else accepts, ships things that actually work, and has been performing under pressure since age 3.<br /><br />
             Two degrees simultaneously. One peer-reviewed publication. Five deployed projects.<br /><br />
             <strong style={{ color: 'var(--ink)' }}>I don't believe in doing one thing.</strong>
           </p>
@@ -110,7 +110,7 @@ export default function About() {
                 <span className="sec-num">05</span>
               </h2>
               <p className="fade-up" style={{ fontSize: '13.5px', lineHeight: 1.82, color: 'var(--muted)', marginTop: '20px' }}>
-                Not just an ML engineer. Someone who questions what everyone else accepts, ships things that actually work, and has been performing under pressure since age 11.<br /><br />
+                Not just an ML engineer. Someone who questions what everyone else accepts, ships things that actually work, and has been performing under pressure since age 3.<br /><br />
                 Two degrees simultaneously. One peer-reviewed publication. Five deployed projects.<br /><br />
                 <strong style={{ color: 'var(--ink)' }}>I don't believe in doing one thing.</strong>
               </p>
