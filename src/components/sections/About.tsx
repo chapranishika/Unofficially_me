@@ -73,7 +73,7 @@ export default function About() {
           <div className="fade-up" style={{ padding: '16px 20px', borderLeft: '3px solid var(--orange)', background: 'var(--light)', fontSize: '13px', lineHeight: 1.7, color: 'var(--ink)', fontStyle: 'italic', marginBottom: '24px' }}>
             "I've been on stage since I was 3. Judges, audiences, pressure. The same way I approach a dance — I don't ship until it's ready to perform."<br /><br />
             "Being a sportsperson taught me spirit. You don't always win, but you always play full out."<br /><br />
-            Quote I live by: "Discipline outlasts motivation — showing up matters more than feeling ready."
+            Quote I live by: "Performance is built in the unseen hours through discipline, repetition, and showing up when it’s uncomfortable."
           </div>
 
           {/* Hobby chips */}
@@ -117,7 +117,7 @@ export default function About() {
               <div className="fade-up" style={{ marginTop: '20px', padding: '16px 20px', borderLeft: '3px solid var(--orange)', background: 'var(--light)', fontSize: '13px', lineHeight: 1.7, color: 'var(--ink)', fontStyle: 'italic' }}>
                 "I've been on stage since I was 3. Judges, audiences, pressure. The same way I approach a dance — I don't ship until it's ready to perform."<br /><br />
                 "Being a sportsperson taught me spirit. You don't always win, but you always play full out."<br /><br />
-                Quote I live by: "Discipline outlasts motivation — showing up matters more than feeling ready."
+                Quote I live by: "Performance is built in the unseen hours through discipline, repetition, and showing up when it’s uncomfortable."
               </div>
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '24px' }}>
