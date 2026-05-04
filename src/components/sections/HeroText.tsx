@@ -128,6 +128,26 @@ export default function HeroText() {
             Mail me
           </a>
 
+          {/* WhatsApp — restore CTA */}
+          <a
+            href="https://wa.me/918369314670"
+            target="_blank" rel="noreferrer"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '10px',
+              background: 'rgba(0,191,165,0.12)', color: 'var(--cream)',
+              fontFamily: 'DM Sans, sans-serif', fontSize: mob ? '12px' : '13px',
+              fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase',
+              padding: mob ? '12px 20px' : '12px 22px',
+              borderRadius: '3px', textDecoration: 'none',
+              transition: 'background .15s, transform .12s',
+              whiteSpace: 'nowrap',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background='var(--teal)'; e.currentTarget.style.transform='translateY(-2px)'}}
+            onMouseLeave={e => { e.currentTarget.style.background='rgba(0,191,165,0.12)'; e.currentTarget.style.transform='translateY(0)'}}
+          >
+            WhatsApp →
+          </a>
+
           {/* Secondary links */}
           <div style={{ display: 'flex', gap: '16px' }}>
             {[
